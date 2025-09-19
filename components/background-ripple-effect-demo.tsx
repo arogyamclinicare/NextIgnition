@@ -6,33 +6,43 @@ import AnimatedUnderline from "@/components/ui/animated-underline"
 import TextType from "@/components/ui/TextType"
 import AnimatedBeamDemo from "@/components/animated-beam-demo"
 import { TextLoopCustomVariantsTransition } from "@/components/ui/text-loop-custom"
+import EnhancedBackground from "@/components/enhanced-background"
+import { ComingSoonText } from "@/components/ui/coming-soon-text"
 
 export default function BackgroundRippleEffectDemo() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background extends everywhere */}
+      {/* Enhanced Background with floating shapes and particles */}
+      <EnhancedBackground />
+      
+      {/* Original Background Ripple Effect */}
       <BackgroundRippleEffect />
       
       {/* Navigation floats on top */}
       <SiteHeader />
       
       {/* Main content - optimized for mobile and desktop */}
-      <div className="relative flex min-h-screen w-full flex-col items-center justify-start pt-30 sm:pt-24 md:pt-32">
-        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8">
+      <div className="relative flex min-h-screen w-full flex-col items-center justify-center pt-16 sm:pt-20 md:pt-24 md:justify-start">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-0 lg:px-0 max-w-6xl md:max-w-none lg:max-w-none mx-auto md:mx-0 lg:mx-0 md:w-full lg:w-full">
           {/* Animated Text Loop */}
-          <div className="mb-8 h-8 flex items-center justify-center">
+          <div className="mb-6 sm:mb-8 md:mb-6 h-8 flex items-center justify-center">
             <TextLoopCustomVariantsTransition />
           </div>
           
-          {/* Animated Beam Diagram */}
-          <div className="mb-12 md:mb-16">
-            <AnimatedBeamDemo />
+          {/* Coming Soon Text */}
+          <div className="mb-8 sm:mb-10 md:mb-8 flex items-center justify-center">
+            <ComingSoonText />
           </div>
-          
-          {/* CTA Button */}
-          <div className="flex justify-center mt-8 md:mt-12">
-            <CTAButton />
-          </div>
+        </div>
+        
+        {/* Animated Beam Diagram - OUTSIDE the constrained container */}
+        <div className="relative w-full h-full md:absolute md:inset-0 md:flex md:items-center md:justify-center">
+          <AnimatedBeamDemo />
+        </div>
+        
+        {/* CTA Button - BELOW the diagram */}
+        <div className="relative z-10 flex justify-center mt-8 sm:mt-10 md:mt-48 lg:mt-64">
+          <CTAButton />
         </div>
       </div>
     </div>
