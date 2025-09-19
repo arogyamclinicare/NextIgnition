@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'NextIgnition',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'NextIgnition - Startup Ecosystem Platform',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NextIgnition - Where Startups Find Their Spark',
     description: 'The platform that connects Founders, Co-founders, Investors, and Mentors. Turn your startup idea into reality with AI-powered insights and global networking.',
-    images: ['/og-image.png'],
+    images: ['/og-image.svg'],
     creator: '@next_ignition',
   },
   robots: {
