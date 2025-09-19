@@ -24,7 +24,7 @@ const CTAButton = () => {
         
         
         <span className="select-none relative z-10">
-          Get Early Access
+          Join Waitlist
         </span>
         
         <div className="top" />

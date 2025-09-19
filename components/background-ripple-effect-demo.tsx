@@ -22,8 +22,8 @@ export default function BackgroundRippleEffectDemo() {
       <SiteHeader />
       
       {/* Main content - optimized for mobile and desktop */}
-      <div className="relative flex min-h-screen w-full flex-col items-center justify-center pt-16 sm:pt-20 md:pt-24 md:justify-start">
-        <div className="relative z-10 text-center px-4 sm:px-6 md:px-0 lg:px-0 max-w-6xl md:max-w-none lg:max-w-none mx-auto md:mx-0 lg:mx-0 md:w-full lg:w-full">
+      <div className="relative flex min-h-screen w-full flex-col items-center justify-center pt-16 sm:pt-20 md:pt-24 md:justify-start md:pointer-events-none">
+        <div className="relative z-[12] text-center px-4 sm:px-6 md:px-0 lg:px-0 max-w-6xl md:max-w-none lg:max-w-none mx-auto md:mx-0 lg:mx-0 md:w-full lg:w-full md:pointer-events-auto">
           {/* Animated Text Loop */}
           <div className="mb-6 sm:mb-8 md:mb-6 h-8 flex items-center justify-center">
             <TextLoopCustomVariantsTransition />
@@ -36,12 +36,12 @@ export default function BackgroundRippleEffectDemo() {
         </div>
         
         {/* Animated Beam Diagram - OUTSIDE the constrained container */}
-        <div className="relative w-full h-full md:absolute md:inset-0 md:flex md:items-center md:justify-center">
+        <div className="relative w-full h-full md:absolute md:inset-0 md:flex md:items-center md:justify-center md:pointer-events-none">
           <AnimatedBeamDemo />
         </div>
         
         {/* CTA Button - BELOW the diagram */}
-        <div className="relative z-10 flex justify-center mt-8 sm:mt-10 md:mt-48 lg:mt-64">
+        <div className="relative z-[12] flex justify-center mt-8 sm:mt-10 md:mt-48 lg:mt-64 md:pointer-events-auto">
           <CTAButton />
         </div>
       </div>

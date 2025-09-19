@@ -8,13 +8,13 @@ import { Menu, HelpCircle, FileText, Info } from 'lucide-react'
 
 export function SiteHeader() {
   const links = [
-    { href: "#about", label: "About", icon: Info },
-    { href: "#faq", label: "FAQ", icon: HelpCircle },
+    { href: "/about", label: "About", icon: Info },
+    { href: "/faq", label: "FAQ", icon: HelpCircle },
     { href: "#contact", label: "Contact Us", icon: FileText },
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 p-4">
+    <header className="fixed top-0 left-0 right-0 z-50 p-4 select-none">
       <div className="container mx-auto max-w-4xl">
         <div className="flex h-14 items-center justify-between px-6 liquid-glass-header rounded-full">
           {/* Brand Logo */}

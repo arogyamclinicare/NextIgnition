@@ -251,7 +251,7 @@ export default function AnimatedBeamDemo() {
 
   return (
     <div
-      className="relative flex h-[240px] sm:h-[260px] md:h-[280px] lg:h-[300px] w-full items-center justify-center overflow-visible p-1 sm:p-2 md:p-0 lg:p-0 z-[25] select-none"
+      className="relative flex h-[240px] sm:h-[260px] md:h-[280px] lg:h-[300px] w-full items-center justify-center overflow-visible p-1 sm:p-2 md:p-0 lg:p-0 z-[15] select-none"
       ref={containerRef}
     >
       <div className="flex size-full flex-col max-w-[320px] sm:max-w-2xl md:max-w-none lg:max-w-none max-h-[220px] sm:max-h-[240px] md:max-h-[260px] lg:max-h-[280px] items-stretch justify-between gap-3 sm:gap-4 md:gap-5 lg:gap-6 md:relative lg:relative md:w-full lg:w-full md:h-full lg:h-full">
