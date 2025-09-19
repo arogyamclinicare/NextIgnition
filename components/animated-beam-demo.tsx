@@ -303,7 +303,7 @@ export default function AnimatedBeamDemo() {
               <div className="absolute inset-0 rounded-full border border-white/20 group-hover:border-white/30 transition-all duration-300" />
               
               <Image
-                src="/WhatsApp Image 2025-09-16 at 11.07.22 AM.jpeg"
+                src="/WhatsApp Image 2025-09-16 at 11.07.23 AM.jpeg"
                 alt="NextIgnition"
                 width={32}
                 height={32}
