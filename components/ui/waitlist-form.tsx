@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { LoadingSpinner } from "./loading-spinner";
 import { 
   waitlistFormSchema, 
   type WaitlistFormData,
