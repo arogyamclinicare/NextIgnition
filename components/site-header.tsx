@@ -49,9 +49,9 @@ export function SiteHeader() {
                          hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
                          transition-all"
             >
-              <Link href="https://chat.whatsapp.com/FqTkzzorqpNHavQLCKlj0c?mode=ems_wa_t" target="_blank" rel="noopener noreferrer">
-                Chat With Us
-              </Link>
+        <Link href="https://chat.whatsapp.com/FqTkzzorqpNHavQLCKlj0c?mode=ems_wa_t" target="_blank" rel="noopener noreferrer">
+          Join Community
+        </Link>
             </Button>
           </div>
 
