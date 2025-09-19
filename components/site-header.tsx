@@ -33,13 +33,27 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-6 text-sm text-gray-600 md:flex">
-            {links.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-purple-600 transition-colors">
-                {l.label}
+          <div className="hidden md:flex items-center gap-6">
+            <nav className="flex items-center gap-6 text-sm text-gray-600">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} className="hover:text-purple-600 transition-colors">
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+            
+            {/* Desktop CTA */}
+            <Button
+              asChild
+              className="bg-lime-400 text-black font-medium rounded-lg px-6 py-2.5
+                         hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
+                         transition-all"
+            >
+              <Link href="https://chat.whatsapp.com/FqTkzzorqpNHavQLCKlj0c?mode=ems_wa_t" target="_blank" rel="noopener noreferrer">
+                Chat With Us
               </Link>
-            ))}
-          </nav>
+            </Button>
+          </div>
 
 
           {/* Mobile Nav */}
