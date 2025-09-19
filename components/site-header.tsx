@@ -24,6 +24,7 @@ export function SiteHeader() {
                 src="/WhatsApp_Image_2025-09-16_at_11.07.24_AM-removebg-preview.png" 
                 alt="NextIgnition logo" 
                 fill
+                sizes="(max-width: 768px) 64px, 100px"
                 className="object-contain" 
                 priority
               />
@@ -67,6 +68,7 @@ export function SiteHeader() {
                       src="/WhatsApp_Image_2025-09-16_at_11.07.24_AM-removebg-preview.png" 
                       alt="NextIgnition logo" 
                       fill
+                      sizes="48px"
                       className="object-contain" 
                       priority
                     />
