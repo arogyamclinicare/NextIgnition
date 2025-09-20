@@ -10,10 +10,10 @@ export type TextShimmerProps = {
   duration?: number;
 };
 
-export function TextShimmer({ 
-  children, 
-  className, 
-  duration = 1.5 
+export function TextShimmer({
+  children,
+  className,
+  duration = 1.5,
 }: TextShimmerProps) {
   return (
     <motion.span
@@ -22,11 +22,13 @@ export function TextShimmer({
         'animate-shimmer',
         className
       )}
-      style={{
-        '--base-color': 'rgb(17 24 39)',
-        '--base-gradient-color': 'rgb(75 85 99)',
-        animationDuration: `${duration}s`,
-      } as React.CSSProperties}
+      style={
+        {
+          '--base-color': 'rgb(17 24 39)',
+          '--base-gradient-color': 'rgb(75 85 99)',
+          animationDuration: `${duration}s`,
+        } as React.CSSProperties
+      }
     >
       {children}
     </motion.span>

@@ -38,7 +38,7 @@ export function TextLoop({
 
     const intervalMs = interval * 1000;
     const timer = setInterval(() => {
-      setCurrentIndex((current) => {
+      setCurrentIndex(current => {
         const next = (current + 1) % items.length;
         onIndexChange?.(next);
         return next;
@@ -54,8 +54,13 @@ export function TextLoop({
   };
 
   return (
-    <div className={cn('relative inline-block whitespace-nowrap min-w-[120px] sm:min-w-[140px] md:min-w-[160px] lg:min-w-[180px] select-none', className)}>
-      <AnimatePresence mode="wait" initial={false}>
+    <div
+      className={cn(
+        'relative inline-block whitespace-nowrap min-w-[120px] sm:min-w-[140px] md:min-w-[160px] lg:min-w-[180px] select-none',
+        className
+      )}
+    >
+      <AnimatePresence mode='wait' initial={false}>
         <motion.div
           key={currentIndex}
           initial='initial'
@@ -63,7 +68,7 @@ export function TextLoop({
           exit='exit'
           transition={transition}
           variants={variants || motionVariants}
-          className="absolute inset-0 flex items-center justify-center"
+          className='absolute inset-0 flex items-center justify-center'
         >
           {items[currentIndex]}
         </motion.div>

@@ -2,11 +2,10 @@ import { TextLoop } from '@/components/core/text-loop';
 import { motion } from 'framer-motion';
 
 export function TextLoopCustomVariantsTransition() {
-
   return (
     <div className='text-center space-y-4'>
       {/* Main tagline with typing effect */}
-      <motion.div 
+      <motion.div
         className='inline-flex whitespace-nowrap text-lg text-gray-600 sm:text-xl md:text-2xl lg:text-3xl select-none'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,7 +52,6 @@ export function TextLoopCustomVariantsTransition() {
           <span>Designers</span>
         </TextLoop>
       </motion.div>
-
     </div>
   );
 }

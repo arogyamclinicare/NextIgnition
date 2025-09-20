@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
-import React, { ReactNode, useCallback } from "react";
+import { cn } from '@/lib/utils';
+import { ChevronDown } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import React, { ReactNode, useCallback } from 'react';
 
 /**
  * Interface for AccordionContext values
@@ -43,7 +43,7 @@ export function AccordionContainer({
   className?: string;
 }) {
   return (
-    <div className={cn("grid grid-cols-2 gap-1", className)}>{children}</div>
+    <div className={cn('grid grid-cols-2 gap-1', className)}>{children}</div>
   );
 }
 
@@ -90,7 +90,7 @@ export function Accordion({
       ? Array.isArray(defaultValue)
         ? defaultValue
         : []
-      : defaultValue || null,
+      : defaultValue || null
   );
 
   /**
@@ -98,14 +98,14 @@ export function Accordion({
    */
   const onChangeIndex = useCallback(
     (value: string) => {
-      setActiveIndex((currentActiveIndex) => {
+      setActiveIndex(currentActiveIndex => {
         if (!multiple) {
           return value === currentActiveIndex ? null : value;
         }
 
         if (Array.isArray(currentActiveIndex)) {
           if (currentActiveIndex.includes(value)) {
-            return currentActiveIndex.filter((i) => i !== value);
+            return currentActiveIndex.filter(i => i !== value);
           }
           return [...currentActiveIndex, value];
         }
@@ -113,10 +113,10 @@ export function Accordion({
         return [value];
       });
     },
-    [multiple],
+    [multiple]
   );
 
-  return React.Children.map(children, (child) => {
+  return React.Children.map(children, child => {
     if (!React.isValidElement(child)) return null;
 
     const childProps = child.props as { value: string };
@@ -161,7 +161,7 @@ export function AccordionItem({
   return (
     <div
       data-active={isActive || undefined}
-      className={cn("rounded-lg overflow-hidden mb-2 group", className)}
+      className={cn('rounded-lg overflow-hidden mb-2 group', className)}
     >
       {children}
     </div>
@@ -206,8 +206,8 @@ export function AccordionHeader({
     <motion.div
       data-active={isActive || undefined}
       className={cn(
-        "p-4 cursor-pointer w-full transition-all font-semibold  text-neutral-500   data-[active]:bg-neutral-100  hover:bg-neutral-100 hover:text-black flex justify-between gap-2 items-center",
-        className,
+        'p-4 cursor-pointer w-full transition-all font-semibold  text-neutral-500   data-[active]:bg-neutral-100  hover:bg-neutral-100 hover:text-black flex justify-between gap-2 items-center',
+        className
       )}
       onClick={handleClick}
     >
@@ -215,8 +215,8 @@ export function AccordionHeader({
       {!customIcon && (
         <ChevronDown
           className={cn(
-            "transition-transform ",
-            isActive ? "rotate-180" : "rotate-0",
+            'transition-transform ',
+            isActive ? 'rotate-180' : 'rotate-0'
           )}
         />
       )}
@@ -257,29 +257,29 @@ export function AccordionPanel({
       {isActive && (
         <motion.div
           data-active={isActive || undefined}
-          initial={{ height: 0, overflow: "hidden" }}
-          animate={{ height: "auto", overflow: "hidden" }}
+          initial={{ height: 0, overflow: 'hidden' }}
+          animate={{ height: 'auto', overflow: 'hidden' }}
           exit={{ height: 0 }}
-          transition={{ type: "spring", duration: 0.3, bounce: 0 }}
+          transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
           className={cn(
-            " bg-neutral-100 px-2 data-[active]:bg-neutral-100 text-black ",
-            className,
+            ' bg-neutral-100 px-2 data-[active]:bg-neutral-100 text-black ',
+            className
           )}
         >
           <motion.article
-            initial={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-            animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+            initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
+            animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }}
             exit={{
-              clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+              clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
             }}
             transition={{
-              type: "spring",
+              type: 'spring',
               duration: 0.4,
               bounce: 0,
             }}
             className={cn(
-              "px-3 bg-transparent  pb-4 space-y-2",
-              articleClassName,
+              'px-3 bg-transparent  pb-4 space-y-2',
+              articleClassName
             )}
           >
             {children}

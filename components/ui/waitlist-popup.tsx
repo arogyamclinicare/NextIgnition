@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import { WaitlistModal } from "./waitlist-modal";
-import { WaitlistForm } from "./waitlist-form";
-import { WaitlistSuccess } from "./waitlist-success";
-import { AnimatedBubbleButton } from "./animated-bubble-button";
+'use client';
+import { useState } from 'react';
+import { WaitlistModal } from './waitlist-modal';
+import { WaitlistForm } from './waitlist-form';
+import { WaitlistSuccess } from './waitlist-success';
+import { AnimatedBubbleButton } from './animated-bubble-button';
 
 export function WaitlistPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ export function WaitlistPopup() {
       <WaitlistModal
         isOpen={isOpen}
         onClose={handleClose}
-        title={showSuccess ? undefined : "Join the NextIgnition Waitlist"}
+        title={showSuccess ? undefined : 'Join the NextIgnition Waitlist'}
       >
         {showSuccess ? (
           <WaitlistSuccess onClose={handleClose} />

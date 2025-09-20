@@ -1,61 +1,131 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 /* Animated Bubble Button Styles */
 @keyframes moveUpRight {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(100%, -100%); }
-  50% { transform: translate(-50%, 50%); }
-  75% { transform: translate(50%, -50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, -100%);
+  }
+  50% {
+    transform: translate(-50%, 50%);
+  }
+  75% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveDownLeft {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-100%, 100%); }
-  50% { transform: translate(50%, -50%); }
-  75% { transform: translate(-50%, 50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    transform: translate(50%, -50%);
+  }
+  75% {
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveRight {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(100%, 0); }
-  50% { transform: translate(-100%, 50%); }
-  75% { transform: translate(50%, -50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(-100%, 50%);
+  }
+  75% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveUpLeft {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-100%, -100%); }
-  50% { transform: translate(50%, 50%); }
-  75% { transform: translate(-50%, -50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, -100%);
+  }
+  50% {
+    transform: translate(50%, 50%);
+  }
+  75% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveDownRight {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(100%, 100%); }
-  50% { transform: translate(-50%, -50%); }
-  75% { transform: translate(50%, 50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    transform: translate(50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveLeft {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-100%, 0); }
-  50% { transform: translate(100%, -50%); }
-  75% { transform: translate(-50%, 50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, 0);
+  }
+  50% {
+    transform: translate(100%, -50%);
+  }
+  75% {
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes moveUp {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(0, -100%); }
-  50% { transform: translate(50%, 50%); }
-  75% { transform: translate(-50%, -50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100%);
+  }
+  50% {
+    transform: translate(50%, 50%);
+  }
+  75% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -225,14 +295,18 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .liquid-glass-header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Glass border utilities */
@@ -240,12 +314,15 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Hover effects with chromatic aberration */
 .glass-border:hover {
-  filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.1)) drop-shadow(1px 0 2px rgba(0, 255, 0, 0.08))
+  filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.1))
+    drop-shadow(1px 0 2px rgba(0, 255, 0, 0.08))
     drop-shadow(-1px 0 2px rgba(0, 0, 255, 0.06));
 }
 
@@ -283,10 +360,11 @@
   transition: 500ms;
   transition-delay: 500ms;
   background-color: #10b981;
-  box-shadow: 0 0 5px rgba(16, 185, 129, 0.3),
-   0 0 15px rgba(16, 185, 129, 0.2), 
-   0 0 25px rgba(16, 185, 129, 0.1),
-   0 0 35px rgba(16, 185, 129, 0.05);
+  box-shadow:
+    0 0 5px rgba(16, 185, 129, 0.3),
+    0 0 15px rgba(16, 185, 129, 0.2),
+    0 0 25px rgba(16, 185, 129, 0.1),
+    0 0 35px rgba(16, 185, 129, 0.05);
   border-radius: 4px;
 }
 
@@ -294,10 +372,11 @@
   transition: 500ms;
   position: absolute;
   background-color: #10b981;
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4),
-   0 0 16px rgba(16, 185, 129, 0.3), 
-   0 0 24px rgba(16, 185, 129, 0.2),
-   0 0 32px rgba(16, 185, 129, 0.1);
+  box-shadow:
+    0 0 8px rgba(16, 185, 129, 0.4),
+    0 0 16px rgba(16, 185, 129, 0.3),
+    0 0 24px rgba(16, 185, 129, 0.2),
+    0 0 32px rgba(16, 185, 129, 0.1);
 }
 
 .cta-button-wrapper .cta-button .top {
@@ -345,7 +424,7 @@
   bottom: 0;
 }
 
-.cta-button-wrapper .cta-button:hover .top, 
+.cta-button-wrapper .cta-button:hover .top,
 .cta-button-wrapper .cta-button:hover .bottom {
   width: 100%;
 }

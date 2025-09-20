@@ -15,7 +15,8 @@ const tabs = [
       '• Founders & Co-founders – Build your team, validate ideas, and raise funding.\n• Experts – Offer mentorship, consultation, or services to startups.\n• Investors (VCs/Angels) – Discover high-potential startups and connect privately.',
   },
   {
-    title: 'What makes NextIgnition different from LinkedIn or other platforms?',
+    title:
+      'What makes NextIgnition different from LinkedIn or other platforms?',
     description:
       'Unlike general networking sites, NextIgnition is startup-focused—from co-founder matching, MVP development, and verified experts, to investor connections and AI-powered business tools.',
   },
@@ -92,8 +93,9 @@ function AnimatedFAQs() {
           {tabs.map((tab, index) => (
             <motion.div
               key={index}
-              className={`overflow-hidden ${index !== tabs.length - 1 ? 'border-b' : ''
-                }`}
+              className={`overflow-hidden ${
+                index !== tabs.length - 1 ? 'border-b' : ''
+              }`}
               onClick={() => handleClick(index)}
             >
               <button
@@ -101,8 +103,9 @@ function AnimatedFAQs() {
                `}
               >
                 <Plus
-                  className={`${activeIndex === index ? 'rotate-45' : 'rotate-0 '
-                    } transition-transform ease-in-out w-5 h-5 flex-shrink-0 mt-0.5 dark:text-gray-200 text-gray-600`}
+                  className={`${
+                    activeIndex === index ? 'rotate-45' : 'rotate-0 '
+                  } transition-transform ease-in-out w-5 h-5 flex-shrink-0 mt-0.5 dark:text-gray-200 text-gray-600`}
                 />
                 {tab.title}
               </button>
@@ -122,7 +125,10 @@ function AnimatedFAQs() {
                       className={`dark:text-white text-black p-3 xl:text-base sm:text-sm text-xs pt-0 w-[90%]`}
                     >
                       {tab.description.split('\n').map((line, lineIndex) => (
-                        <div key={lineIndex} className={line.startsWith('•') ? 'ml-4' : ''}>
+                        <div
+                          key={lineIndex}
+                          className={line.startsWith('•') ? 'ml-4' : ''}
+                        >
                           {line}
                         </div>
                       ))}

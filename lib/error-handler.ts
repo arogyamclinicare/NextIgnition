@@ -17,7 +17,12 @@ export class CustomError extends Error {
   public statusCode: number;
   public details?: any;
 
-  constructor(message: string, code: string = 'INTERNAL_ERROR', statusCode: number = 500, details?: any) {
+  constructor(
+    message: string,
+    code: string = 'INTERNAL_ERROR',
+    statusCode: number = 500,
+    details?: any
+  ) {
     super(message);
     this.name = 'CustomError';
     this.code = code;
@@ -32,22 +37,22 @@ export const errorCodes = {
   DATABASE_QUERY_FAILED: 'DATABASE_QUERY_FAILED',
   RECORD_NOT_FOUND: 'RECORD_NOT_FOUND',
   DUPLICATE_RECORD: 'DUPLICATE_RECORD',
-  
+
   // Validation errors
   VALIDATION_ERROR: 'VALIDATION_ERROR',
   INVALID_EMAIL: 'INVALID_EMAIL',
   INVALID_PHONE: 'INVALID_PHONE',
   REQUIRED_FIELD_MISSING: 'REQUIRED_FIELD_MISSING',
-  
+
   // Authentication errors
   UNAUTHORIZED: 'UNAUTHORIZED',
   FORBIDDEN: 'FORBIDDEN',
   TOKEN_EXPIRED: 'TOKEN_EXPIRED',
-  
+
   // External service errors
   SUPABASE_ERROR: 'SUPABASE_ERROR',
   EMAIL_SERVICE_ERROR: 'EMAIL_SERVICE_ERROR',
-  
+
   // General errors
   INTERNAL_ERROR: 'INTERNAL_ERROR',
   NETWORK_ERROR: 'NETWORK_ERROR',
@@ -76,7 +81,7 @@ export function logError(error: Error | CustomError, context?: any): void {
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
     console.error('🚨 Error:', errorInfo);
-    if (context) {
+    if (context && Object.keys(context).length > 0) {
       console.error('📋 Context:', context);
     }
   }
@@ -89,7 +94,11 @@ export function logError(error: Error | CustomError, context?: any): void {
   }
 }
 
-export function handleApiError(error: any): { message: string; code: string; statusCode: number } {
+export function handleApiError(error: any): {
+  message: string;
+  code: string;
+  statusCode: number;
+} {
   if (error instanceof CustomError) {
     return {
       message: error.message,

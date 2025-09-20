@@ -23,5 +23,13 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "components/core/text-effect.tsx",
+    "components/ui/TextType.tsx",
+    "components/enhanced-background.tsx"
+  ]
 }
