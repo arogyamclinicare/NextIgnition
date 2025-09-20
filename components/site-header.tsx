@@ -4,13 +4,12 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import Image from "next/image"
-import { Menu, HelpCircle, FileText, Info } from 'lucide-react'
+import { Menu, HelpCircle, Info } from 'lucide-react'
 
 export function SiteHeader() {
   const links = [
     { href: "/about", label: "About", icon: Info },
     { href: "/faq", label: "FAQ", icon: HelpCircle },
-    { href: "#contact", label: "Contact Us", icon: FileText },
   ]
 
   return (
