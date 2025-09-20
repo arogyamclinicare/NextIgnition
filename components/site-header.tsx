@@ -68,7 +68,7 @@ export function SiteHeader() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="liquid-glass border-gray-800 p-0 w-64 flex flex-col">
+              <SheetContent side="right" className="bg-white border-gray-200 p-0 w-64 flex flex-col">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <SheetDescription className="sr-only">
                   Mobile navigation menu for NextIgnition website
@@ -76,28 +76,18 @@ export function SiteHeader() {
                 
                 {/* Brand Header */}
                 <div className="flex items-center gap-1.5 px-4 py-4 border-b border-gray-200">
-                  <div className="h-12 w-12 relative">
-                    <Image 
-                      src="/WhatsApp Image 2025-09-16 at 11.07.22 AM.jpeg" 
-                      alt="NextIgnition logo" 
-                      fill
-                      sizes="48px"
-                      className="object-contain brightness-0 invert" 
-                      priority
-                    />
-                  </div>
-                  <span className="font-semibold tracking-wide text-white text-lg">NextIgnition</span>
+                  <span className="font-semibold tracking-wide text-gray-900 text-lg">NextIgnition</span>
                 </div>
 
                 {/* Nav Links */}
-                <nav className="flex flex-col gap-1 mt-2 text-gray-600">
+                <nav className="flex flex-col gap-1 mt-2">
                   {links.map((l) => (
                     <Link
                       key={l.href}
                       href={l.href}
-                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-purple-600 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-purple-600 transition-colors text-gray-700"
                     >
-                      <span className="inline-flex items-center justify-center w-5 h-5 text-gray-500">
+                      <span className="inline-flex items-center justify-center w-5 h-5 text-gray-600">
                         <l.icon className="h-4 w-4" />
                       </span>
                       <span className="text-sm">{l.label}</span>
