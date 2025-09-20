@@ -6,11 +6,6 @@
       "use": "@vercel/next"
     }
   ],
-  "functions": {
-    "app/**/*.tsx": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
