@@ -76,12 +76,12 @@ export function WaitlistModal({
               ease: [0.16, 1, 0.3, 1],
             }}
             className={cn(
-              'relative w-full max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-hidden',
+              'relative w-full max-w-2xl max-h-[98vh] sm:max-h-[90vh] overflow-hidden',
               'bg-[#fdf9f6] rounded-2xl sm:rounded-2xl shadow-2xl',
               'border border-gray-200',
               'mx-1 sm:mx-4', // Add horizontal margins for mobile
               'my-1 sm:my-4',  // Add vertical margins for mobile
-              'min-h-[50vh]' // Ensure minimum height on mobile
+              'min-h-[70vh]' // Ensure minimum height on mobile
             )}
             style={{ zIndex: 2147483647 }}
           >
@@ -99,7 +99,7 @@ export function WaitlistModal({
             )}
 
             {/* Content */}
-            <div className='overflow-y-auto max-h-[calc(95vh-80px)] sm:max-h-[calc(90vh-80px)]'>
+            <div className='overflow-y-auto max-h-[calc(98vh-120px)] sm:max-h-[calc(90vh-120px)]'>
               {children}
             </div>
           </motion.div>
@@ -128,7 +128,7 @@ export function WaitlistModal({
           /* Mobile-specific improvements */
           @media (max-width: 640px) {
             .waitlist-modal-overlay {
-              padding: 8px !important;
+              padding: 4px !important;
             }
             
             /* Ensure form inputs are properly sized on mobile */
@@ -140,12 +140,17 @@ export function WaitlistModal({
               border-radius: 8px;
             }
             
-            /* Ensure button is always visible */
+            /* Ensure button is always visible with proper spacing */
             .waitlist-modal-overlay button[type="submit"] {
-              position: sticky !important;
-              bottom: 0 !important;
-              z-index: 10 !important;
-              margin-top: 16px !important;
+              margin-top: 24px !important;
+              margin-bottom: 24px !important;
+              padding: 16px !important;
+              font-size: 16px !important;
+            }
+            
+            /* Ensure modal content has proper spacing */
+            .waitlist-modal-overlay .overflow-y-auto {
+              padding-bottom: 20px !important;
             }
           }
         `;

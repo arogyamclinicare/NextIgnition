@@ -405,14 +405,14 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
           animationNum={13}
           timelineRef={formRef}
           customVariants={revealVariants}
-          className='pt-4 pb-2 sm:pb-4'
+          className='pt-6 pb-6 sm:pb-8'
         >
           <motion.button
             type='submit'
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className='w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sticky bottom-0 z-10'
+            className='w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2'
           >
             {isSubmitting ? (
               <>
