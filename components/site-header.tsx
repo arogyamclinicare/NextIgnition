@@ -78,11 +78,11 @@ export function SiteHeader() {
                 <div className="flex items-center gap-1.5 px-4 py-4 border-b border-gray-200">
                   <div className="h-12 w-12 relative">
                     <Image 
-                      src="/WhatsApp Image 2025-09-16 at 11.07.24 AM.jpeg" 
+                      src="/WhatsApp Image 2025-09-16 at 11.07.22 AM.jpeg" 
                       alt="NextIgnition logo" 
                       fill
                       sizes="48px"
-                      className="object-contain" 
+                      className="object-contain brightness-0 invert" 
                       priority
                     />
                   </div>
